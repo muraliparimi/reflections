@@ -1,0 +1,42 @@
+This is my first reflection.
+I have installed sublime and added it to PATH variable.
+I now can launch the sublime editor from my terminal.
+
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+Diff is a very good tool to compare two versions of your code.
+However this diff will not highlight the differences. You have to look through the output and find out the differences. Still a better option rather than to go through thousands of lines of source code. 
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+Yes, there is no need to save all the older versions with different names and manage those old version file and also it is easier to track the timings when these changes are made. It is sapce efficient design as the new versions automatically saved will save only the changes.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+Manual commit results in meaningful versions.
+Manual commit has the risk of user forgetting to commit.
+
+Auto git may or may not resuly in logical versions. Many more un-desired commits makes the traversion back the commits a nightmare for the reviewers.
+
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+I think the design consideration is to allow git to support version control for maintaining projects. Google docs is more end cosumer oriented.
+
+How can you use the commands git log and git diff to view the history of files?
+
+git log will show the commits made on to the project. It provides an interface to scroll up and scroll down and get the commit id of the commit of interest.
+
+Git diff can provide the differneces between two commit ids. It has a nice color schemes to highlight the changes. Additions/insertions in green and deletions in red color.
+
+git clone <<github repository>> will clone the project from repository to your local sandbox.
+
+How might using version control make you more confident to make changes that could break something?
+===================================================================================================
+
+We can identify the verison where the bug was introduced with git log. So we can always revert back to the version where the bug was not there.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+Play with couple of repositories.
+
