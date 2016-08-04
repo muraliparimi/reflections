@@ -1,3 +1,8 @@
 What happens when you initialize a repository? Why do you need to do it?
 
 When initialised it creates some metadata directories under a new hidden directory .git.
+
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+We can add the changes to the staging area and compare that with recent commit. Or we can also compare the working area changes with staging area contents and ensure the changes seem logical. Else we can discard the changes from working area by using "git reset --hard". This action is un-doable. So caution must be exercised before firing the reset command.
