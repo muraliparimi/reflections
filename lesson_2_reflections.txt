@@ -6,3 +6,16 @@ When initialised it creates some metadata directories under a new hidden directo
 How can you use the staging area to make sure you have one commit per logical change?
 
 We can add the changes to the staging area and compare that with recent commit. Or we can also compare the working area changes with staging area contents and ensure the changes seem logical. Else we can discard the changes from working area by using "git reset --hard". This action is un-doable. So caution must be exercised before firing the reset command.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Branches are mainly useful when to work on same source code for multiple changes not relevant to each other. These changes are required for two completely different versions of same original version. 
+
+Use git branch <<new branch name>> to create a new branch. SO it will create a new branch.
+use git checkout <<new branch name>> to checkout and point to new branch.
+then make changes and follow the usual series of steps for commiting the changes as follows.
+
+git add <<changed object>> will add it to the staging area.
+git commint -m "Your meaningful message goes here".
+
+if you are working on multiple branches and find a need to change to another branch, then simply type git checkout "other branch"
