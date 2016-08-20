@@ -1,13 +1,15 @@
 What happens when you initialize a repository? Why do you need to do it?
-
+========================================================================
 When initialised it creates some metadata directories under a new hidden directory .git.
 
 
 How can you use the staging area to make sure you have one commit per logical change?
+======================================================================================
 
 We can add the changes to the staging area and compare that with recent commit. Or we can also compare the working area changes with staging area contents and ensure the changes seem logical. Else we can discard the changes from working area by using "git reset --hard". This action is un-doable. So caution must be exercised before firing the reset command.
 
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+===================================================================================================================
 
 Branches are mainly useful when to work on same source code for multiple changes not relevant to each other. These changes are required for two completely different versions of same original version. 
 
@@ -19,3 +21,17 @@ git add <<changed object>> will add it to the staging area.
 git commint -m "Your meaningful message goes here".
 
 if you are working on multiple branches and find a need to change to another branch, then simply type git checkout "other branch"
+
+How do the diagrams help you visualize the branch structure?
+============================================================
+
+It depicts the reachability. Although i didnt created it, I felt i should have done it. After seeing the answer, I understood the value.
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+=========================================================================================================
+
+git merge branch1 branch2 will merge the two branches. If we are on a different branch and wanted to merge branch1 and branch2, then the changes of current branch also will be added to merge. Hence it is better to checkout one of the branch for example "git checkout branch1" and then do "git merge branch1 branch2". The order doesn't make a difference as we are merging the changes in two branches and creating new commit. Since we(head is pointing to) are on one of the branch to be merged, we can simply merge with other branch by simply "git merge branch2".
+
+We represent the parent of the current result of merging two branches as both branches. Some times merging will fail. in that case do "git merge --abort"
+Once the merge is complete, we can delete the branch(label) with "git branch -d branch1". This will simply remove the label but will maintain the old commits. we can traverse through the old commits with the commit id of the current merge.
