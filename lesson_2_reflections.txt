@@ -35,3 +35,13 @@ git merge branch1 branch2 will merge the two branches. If we are on a different 
 
 We represent the parent of the current result of merging two branches as both branches. Some times merging will fail. in that case do "git merge --abort"
 Once the merge is complete, we can delete the branch(label) with "git branch -d branch1". This will simply remove the label but will maintain the old commits. we can traverse through the old commits with the commit id of the current merge.
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+=======================================================================================
+
+When multiple people working on different pieces not tied to each other, the merging is straighforward. However If a person needs one object and other person doesn't the same object in a big picture git merge requires a manual intervention.
+
+git log --graphic has been used to view the brannches commits along with main trunk.
+
+as of now I felt a manual merging is better. More to be added later.
